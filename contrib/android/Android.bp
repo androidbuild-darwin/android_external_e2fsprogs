@@ -28,6 +28,9 @@ cc_binary {
         "basefs_allocator.c",
     ],
     target: {
+        darwin: {
+            include_dirs: ["external/libcap/libcap/include/uapi"],
+        },
         host: {
             static_libs: [
                 "libext2_com_err",
